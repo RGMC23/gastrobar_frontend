@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.landing-container {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #000000, #808080, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 5rem 2rem; /* Agregar espacio para que no quede pegado al navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem; /* Asegurar que el hero comience debajo del navbar */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5); /* Ajustar la sombra para que sea más sutil */
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-size: 3rem; /* Aumentar el tamaño del título */
+  margin: 1rem 0;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: fadeInText 1.2s ease-in-out forwards;
+}
+
+.hero-title:hover {
+  transform: translateY(-5px);
+  color: #808080;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: fadeInText 1.2s ease-in-out forwards;
+}
+
+.hero-subtitle:hover {
+  transform: translateY(-5px);
+  color: #808080;
+}
+
+.app-name {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.services-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.service {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: fadeInText 1.2s ease-in-out forwards;
+}
+
+.service-title:hover {
+  transform: translateY(-5px);
+  color: #808080;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: fadeInText 1.2s ease-in-out forwards;
+}
+
+.service-description:hover {
+  transform: translateY(-5px);
+  color: #808080;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Hacer el navbar transparente */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5); /* Agregar sombra blanca al hacer hover */
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #808080;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:hover {
+  background: #808080;
+  color: #fff;
+}
+
+.login-icon {
+  margin-right: 0.5rem;
+}
